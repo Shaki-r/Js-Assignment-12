@@ -1,6 +1,6 @@
 body {
-  background-color: #e0e8f6; 
-  font-family: 'Poppins', sans-serif;
+  background-color: #e0e8f6;
+  font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,15 +43,20 @@ h1.show-heading {
 }
 
 #todo-input {
-  width: 50px; 
+  width: 50px;
   height: 50px;
   padding: 0;
   border: none;
   outline: none;
   border-radius: 50% !important;
   background-color: #e0e8f6;
-  box-shadow: inset 5px 5px 8px #b8c4d9, inset -5px -5px 8px #ffffff;
-  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1), border-radius 0.4s ease, padding 0.4s ease;
+  box-shadow:
+    inset 5px 5px 8px #b8c4d9,
+    inset -5px -5px 8px #ffffff;
+  transition:
+    width 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    border-radius 0.4s ease,
+    padding 0.4s ease;
   font-size: 16px;
   color: #333;
 }
@@ -70,7 +75,9 @@ h1.show-heading {
 }
 
 .todo-container.active #todo-input:focus {
-  box-shadow: inset 3px 3px 5px #b8c4d9, inset -3px -3px 5px #ffffff;
+  box-shadow:
+    inset 3px 3px 5px #b8c4d9,
+    inset -3px -3px 5px #ffffff;
 }
 
 .todo-container.active #todo-input:focus::placeholder {
@@ -119,9 +126,6 @@ h1.show-heading {
 #add-btn {
   width: 54px;
   height: 54px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #1e3a8a;
   border: none;
   outline: none;
   border-radius: 50px;
@@ -130,11 +134,16 @@ h1.show-heading {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 6px 6px 12px #b8c4d9, -6px -6px 12px #ffffff;
+  box-shadow:
+    6px 6px 12px #b8c4d9,
+    -6px -6px 12px #ffffff;
   transform: scale(0);
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-size: 2rem;
+  color: rebeccapurple;
+  font-weight: bold;
 }
 
 #add-btn {
@@ -150,32 +159,31 @@ h1.show-heading {
 
 #add-btn:hover {
   color: #2563eb;
-  box-shadow: 4px 4px 8px #b8c4d9, -4px -4px 8px #ffffff;
+  box-shadow:
+    4px 4px 8px #b8c4d9,
+    -4px -4px 8px #ffffff;
 }
 
 #add-btn:active {
-  box-shadow: inset 4px 4px 6px #b8c4d9, inset -4px -4px 6px #ffffff;
+  box-shadow:
+    inset 4px 4px 6px #b8c4d9,
+    inset -4px -4px 6px #ffffff;
 }
 
 #todo-show {
   margin-top: 35px;
-  width: 100%;
+  width: auto;
   max-width: 500px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  color: #1e3a8a;
-  font-weight: 500;
-  display: grid;
-  grid-template-columns: 1fr auto; 
-  row-gap: 20px;                   
-  column-gap: 40px;                
-  align-items: center;             
+  display: flex;
+  flex-direction: column;
+  column-gap: 40px;
+  align-items: center;
   padding: 10px 20px;
-  border-left: 3px solid #3b82f6;  
+  border-left: 3px solid #3b82f6;
 }
 
 #todo-show br {
-  display: none; 
+  display: none;
 }
 
 #todo-show button {
@@ -205,19 +213,25 @@ h1.show-heading {
   transform: scale(0.95);
 }
 
-
-
 li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  word-break: break-all;
+  justify-content: space-between;
   background-color: #e0e8f6;
   padding: 15px 20px;
   border-radius: 15px;
   margin-bottom: 15px;
   font-size: 16px;
   color: #333;
-  box-shadow: 4px 4px 8px #b8c4d9, -4px -4px 8px #ffffff;
+  box-shadow: inset 4px 4px 8px #b8c4d9, inset -4px -4px 8px #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e3a8a;
+  font-family: "Poppins", sans-serif;
+  width: 98%;
+  height: auto;
 }
 
 li button {
@@ -229,15 +243,33 @@ li button {
   font-weight: 600;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 3px 3px 6px #b8c4d9, -3px -3px 6px #ffffff;
+  box-shadow:
+    3px 3px 6px #b8c4d9,
+    -3px -3px 6px #ffffff;
   transition: all 0.2s ease;
+  margin-left: 5rem;
+  width: 100%;
+  height: 2rem;
+  font-size: 1rem;
+  margin: 0px;
 }
 
 li button:hover {
   color: #ff0000;
-  box-shadow: 2px 2px 4px #b8c4d9, -2px -2px 4px #ffffff;
+  box-shadow:
+    2px 2px 4px #b8c4d9,
+    -2px -2px 4px #ffffff;
 }
 
 li button:active {
-  box-shadow: inset 2px 2px 4px #b8c4d9, inset -2px -2px 4px #ffffff;
+  box-shadow:
+    inset 2px 2px 4px #b8c4d9,
+    inset -2px -2px 4px #ffffff;
+}
+.btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 15rem;
+  gap: 2rem;
 }
